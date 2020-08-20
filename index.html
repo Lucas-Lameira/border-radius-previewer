@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Lucas lameira">
-    <meta name="description" content="The user can change the border-radius property to preview how the shape looks like">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-        Criar favicon or something like that
-        <link rel="" href="" type=""> 
-    -->
-    <link rel="stylesheet" href="styles.css">
-    <title>Border-radius Previewer</title>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Lucas lameira">
+        <meta name="description" content="The user can change the border-radius property to preview how the shape looks like">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+            Criar favicon or something like that
+            <link rel="" href="" type=""> 
+        -->
+        <link rel="stylesheet" href="styles.css">
+        <title>Border-radius Previewer</title>
+        
 </head>
-<body>  
-    <section id="container">
+<body>      
+    
+    <section id="container">        
         <section id="left">
             <div id="box">
                 
@@ -37,23 +38,23 @@
                  0 %
               </div>
             </div> 
-            
+
             <div class="inputContainer">
-                <label for="bottom-left">bottom-left</label>
-                <input
-                id="botLeft"
-                class="rangeSlider"              
-                  type="range"              
-                  name="bottom-left"              
+                <label for="top-right">top-right</label>
+                <input              
+                  id="topRight" 
+                  class="rangeSlider"              
+                  name="top-right"
+                  type="range" 
                   value="0"
                   min="0" 
                   max="100"
                   step="1"               
-                >
-                <div id="outputBotLeft" class="output">
+                >    
+                <div id="outputTopRight" class="output">
                     0 %
                 </div>
-            </div>
+            </div>  
 
             <div class="inputContainer">
                 <label for="bottom-right">bottom-right</label>
@@ -72,33 +73,32 @@
                 </div>
             </div>
             
-
             <div class="inputContainer">
-                <label for="top-right">top-right</label>
-                <input              
-                  id="topRight" 
-                  class="rangeSlider"              
-                  name="top-right"
-                  type="range" 
+                <label for="bottom-left">bottom-left</label>
+                <input
+                id="botLeft"
+                class="rangeSlider"              
+                  type="range"              
+                  name="bottom-left"              
                   value="0"
                   min="0" 
                   max="100"
                   step="1"               
-                >    
-                <div id="outputTopRight" class="output">
+                >
+                <div id="outputBotLeft" class="output">
                     0 %
                 </div>
-            </div>   
-            <pre>
-                    Border-radius{
-                        border-radius:1 px solid black; 
-                        border-radius:1 px solid black; 
-                        border-radius:1 px solid black; 
-                        border-radius:1 px solid black; 
-                    }
-            </pre>    
+            </div>
+            
+            <div id="codeContainer">
+                <code id="showStyle">border-radius: 0%;</code>                
+                <button onclick="copyCode()">
+                    <img src="clipboard.svg" alt="clipboard">                     
+                </button>
+            </div>
         </aside>
     </section>    
+    <input type="text" value="Hello World" id="copyInput" >
 </body>
 <script src="script.js"></script>
 </html>
